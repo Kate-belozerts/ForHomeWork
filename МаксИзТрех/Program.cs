@@ -26,8 +26,4 @@ if(numC > max)
 {
     max = numC;
 }
-else
-{
-    max = numA;
-}
 Console.WriteLine($"Максимальное число: {max}");
