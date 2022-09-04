@@ -11,16 +11,28 @@ int count = 0;
 
 while (count < num)
 {
-     if(num % 2 == 0)
-     {
-     count = (count + 2);
-     }
-     
-     else
-     {
-     count = (count + 2);
-     num = (num-1);
-     }
- Console.Write($"{count}, ");
+    if (num % 2 == 1)
+    {
+        num = (num - 1);
+    }
+    count = (count + 2);
+    Console.Write($"{count}, ");
 }
 
+
+// int count = 0;
+
+// while (count < num)
+// {
+//      if(num % 2 == 0)
+//      {
+//      count = (count + 2);
+//      }
+
+//      else
+//      {
+//      count = (count + 2);
+//      num = (num-1);
+//      }
+//  Console.Write($"{count}, ");
+// }
