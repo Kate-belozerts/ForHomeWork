@@ -20,6 +20,9 @@ while (count < num)
 }
 
 
+
+//Старое решение:
+
 // int count = 0;
 
 // while (count < num)
