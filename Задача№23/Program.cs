@@ -6,7 +6,7 @@
 Console.Clear();
 
 Console.WriteLine("Enter number: ");
-int N = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 
 void Cube (int num)
 {
@@ -20,4 +20,4 @@ void Cube (int num)
         Console.WriteLine(result);
     }
 }
-Cube(N);
+Cube(n);
