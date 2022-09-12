@@ -7,15 +7,15 @@ Console.Clear();
 Console.WriteLine("Enter the number, please: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int Sum (int n)
+int Sum(int n)
 {
     if (n > 10)
     {
         int res = default;
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n+10; i++)//n+10 потому что индекс становится больше остатка и программа не считает последнюю единицу или 2
         {
             res = n % 10 + res;
-            n = n / 10;
+            n = n / 10;           
         }
         return res;
     }
