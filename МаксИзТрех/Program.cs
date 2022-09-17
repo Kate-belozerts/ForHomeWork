@@ -27,3 +27,15 @@ if(numC > max)
     max = numC;
 }
 Console.WriteLine($"Максимальное число: {max}");
+
+//Мое решение спустя пару недель: (тоже самое, но кратко)
+// Console.Clear();
+// int a = int.Parse(Console.ReadLine()!);
+// int b = int.Parse(Console.ReadLine()!);
+// int c = int.Parse(Console.ReadLine()!);
+
+// int max = a;
+// if (b > max) max = b;
+// if (c > max) max = c; 
+
+// Console.Write($"{max} - max");

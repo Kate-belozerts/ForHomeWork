@@ -27,7 +27,28 @@ else
     Console.WriteLine($"Третяя цифра = {num1}");
 }
 
+//Мое новое краткое решение спустя пару недель:
+// Console.Clear();
 
+// int number = new Random().Next(1, 10000);
+// System.Console.WriteLine(number);
+
+// string Third (int num)
+// {
+//     if (num < 100 && num > 0) System.Console.WriteLine("This number doesn't have third number");
+//     if (num < 0) num = num * -1;
+//     if (num >= 1000) num = num / 10;
+//     if (num > 99 && num < 1000)
+//     {
+//         num = num % 10;
+//     }
+//     return ($"{num} - the third number");
+// }
+
+// string res = Third(number);
+// System.Console.WriteLine(res);
+
+//______________________________________________________________________________________________________________________
 //Старое решение:
 
 // if (num < 100)

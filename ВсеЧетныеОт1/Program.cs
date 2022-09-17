@@ -19,6 +19,23 @@ while (count < num)
     Console.Write($"{count}, ");
 }
 
+//Мое новое краткое решение спустя пару недель:
+// Console.Clear();
+// int a = int.Parse(Console.ReadLine()!);
+// int otr = a;
+
+// if (a < 0) a = a * -1;
+// if (a % 2 == 1) a = a-1;
+// if(a % 2 == 0)
+// {
+//     for (int i = 2; i <= a; i = i + 2)
+//     {
+//         if (otr < 0) Console.Write($"-{i}, ");
+//         if (otr > 0) Console.Write($"{i}, ");
+
+//     }
+// }
+
 
 
 //Старое решение:

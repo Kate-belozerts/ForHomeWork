@@ -21,7 +21,23 @@ else
     Console.WriteLine("Такого дня недели не существует :)");
 }
 
+//Мое новое краткое решение спустя пару недель:
+// Console.Clear();
 
+// int day = Convert.ToInt32(Console.ReadLine()!);
+
+// string Week(int n)
+// {
+//     if (n < 6 && n > 0) return "Not a weekend";
+//     if (n < 8 && n > 5) return "Holiday!!!";
+//     return "This day doesn't exist((";
+// }
+
+// System.Console.WriteLine(Week(day));
+
+
+
+//____________________________________________________________________________________________________________________
 //Старый вариант:
 
 // while(num > 0 && num < 8)

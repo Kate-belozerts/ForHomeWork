@@ -23,3 +23,31 @@ else
 {
     Console.WriteLine("Число не является трехзначным");
 }
+
+
+
+//Мое второе краткое решение спустя пару недель:
+// Console.Clear();
+
+// int Generator(int min, int max)
+// {
+//     Random n = new Random();
+//     int number = n.Next(min, max);
+//     return number;
+// }
+
+// int number = Generator(100, 1000);
+// Console.WriteLine(number);
+// System.Console.WriteLine();
+
+// int Sec(int n)
+// {
+//     if (n> 99 && n < 1000)
+//     {
+//         n = (n / 10) % 10;
+//     }
+//     return n;
+// }
+
+// System.Console.WriteLine(Sec(number));
+

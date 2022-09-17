@@ -17,3 +17,11 @@ else
 {
   Console.WriteLine($"Число {number} является нечетным!");
 }
+
+//Мое краткое решение спустя пару недель:
+// Console.Clear();
+// int a = int.Parse(Console.ReadLine()!);
+
+// if(a % 2 == 0) Console.Write($"Yes");
+// else Console.Write($"No");
+
