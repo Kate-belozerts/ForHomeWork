@@ -5,6 +5,14 @@
 Console.Clear();
 double[] array = new double[10];
 
+Fill(array);
+Show(array);
+Console.WriteLine();
+
+double result = Difference(array);
+Console.WriteLine($"Разница между минимальным и максимальным элементом массива = {result} ");
+
+
 void Fill(double[] arr1)
 {
     Random r = new Random();
@@ -22,10 +30,6 @@ void Show(double[] arr2)
     }
 }
 
-Fill(array);
-Show(array);
-Console.WriteLine();
-
 double Difference(double[] arr3)
 {
     double min = arr3[0];
@@ -39,5 +43,3 @@ double Difference(double[] arr3)
     return res = max - min;
 }
 
-double result = Difference(array);
-Console.WriteLine($"Разница между минимальным и максимальным элементом массива = {result} ");
