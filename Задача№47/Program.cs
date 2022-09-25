@@ -29,7 +29,7 @@ double[,] FillArray (int rows, int columns)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i,j] = r. Next(-50, 50);
+            matrix[i,j] = (r.NextDouble() * 7)-5;// 7 и (-5) просто случайный диапазон
         }
     }
     return matrix;
@@ -42,7 +42,7 @@ void PrintArr(double[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Console.Write($"{arr[i, j], 5} ");   //цифра 5 делает 5 пробелов, чтобы выровнить столбцы
+            Console.Write($"{arr[i, j], 5:f2} ");   //цифра 5 делает 5 пробелов, чтобы выровнить столбцы
         }
         Console.WriteLine($" ");
     }
