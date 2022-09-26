@@ -41,19 +41,19 @@ void PrintMatrix(int[,] arr)
 void FindAverage(int[,] matrix)
 {
     double sum = default;
-    double res = default;
     int j = 0;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         sum += matrix[i, j];
         if (i == matrix.GetLength(0)-1 && j < matrix.GetLength(1))
         {
-            res = sum / matrix.GetLength(0);
-            Console.WriteLine($"Среднее арифметическое для столбца {j} = {res:f1}");
+            sum = sum / matrix.GetLength(0);
+            Console.WriteLine($"Среднее арифметическое для столбца {j} = {sum:f1}");
             j++;
             i = -1;
             sum = 0;
         }
+        if (j == matrix.GetLength(1)) break;
     }
 }
 
