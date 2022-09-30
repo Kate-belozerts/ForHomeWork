@@ -34,7 +34,7 @@ void ShowMatrix(int[,] matr)
     Console.WriteLine($"_____________________________________");
 }
 
-void Calculate(int[,] matr)
+(int, int) Calculate(int[,] matr)
 {
     int[] temp = new int[matr.GetLength(0)];
     int sum = default;
@@ -56,12 +56,14 @@ void Calculate(int[,] matr)
         }
         if (i == matr.GetLength(1)-1) break;
     }
-    FindMin(temp);
+    (int, int) res = FindMin(temp);
+    return res;
 }
 
-void FindMin(int[] arr)
+(int, int) FindMin(int[] arr)
 {
     int min = arr[0];
+    int st = default;
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] < min)
@@ -69,16 +71,20 @@ void FindMin(int[] arr)
             min = arr[i];
         }
     }
-    Console.WriteLine($" Сумма строки = {min} ");
+    //Console.WriteLine($" Сумма строки = {min} "); - Вывод результата и вычисления не должны зависеть друг от друга -> убрала из кода
     for (int j = 0; j < arr.Length; j++)
     {
-        if (arr[j] == min) Console.Write($" Строка номер {j} с наименьшей суммой элементов!");
+        if (arr[j] == min) st = j; //Console.Write($" Строка номер {j} с наименьшей суммой элементов!");
     }
+    (int, int) res = (min, st);
+    return res;
 }
 
 
 
 int[,] matrix = CreateMatrix(4, 5, 0, 50);
 ShowMatrix(matrix);
-Calculate(matrix);
+(int, int) result = Calculate(matrix);
+Console.WriteLine($" Сумма строки = {result.Item1} ");
+Console.WriteLine($" Строка номер {result.Item2} с наименьшей суммой элементов!");
 
