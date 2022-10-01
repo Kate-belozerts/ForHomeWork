@@ -4,13 +4,14 @@
 66(0,0,0) 27(0,0,1) 25(0,1,0) 90(0,1,1)
 34(1,0,0) 26(1,0,1) 41(1,1,0) 55(1,1,1)*/
 
-int[,,] matrix = NewMatrix3D(2, 2, 2, 10, 99);
+int[,,] matrix = NewMatrix3D(2, 2, 2);
 Show(matrix);
 
-int[,,] NewMatrix3D(int rows, int col, int depth, int min, int max)
+int[,,] NewMatrix3D(int rows, int col, int depth)
 {
     int[,,] matr = new int[rows, col, depth];
-    int num = new Random().Next(10, 100);
+    int result = default;
+    int num = 15;
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
@@ -18,7 +19,13 @@ int[,,] NewMatrix3D(int rows, int col, int depth, int min, int max)
             for (int k = 0; k < matr.GetLength(2); k++)
             {
                 int number = RecRandom(num);
-                matr[i, j, k] = number;
+                num = number;
+                result = CheckList(matr, num);
+                if (result == 1)
+                {
+                    number = RecRandom(num);
+                }
+                else matr[i, j, k] = num;
             }
         }
     }
@@ -46,8 +53,39 @@ void Show(int[,,] matr)
 int RecRandom(int num)
 {
     int n = new Random().Next(10, 100);
-    if (num == n) return RecRandom(num);
+    if (n == num
+    || n < 10 // условия проставила из-за ноля, периодически проявляющего в ответе, хотя это и не решает проблему((
+    || n > 99) return RecRandom(num);
     else return n;
 }
 
+int CheckList(int[,,] arr, int num)
+{
+    int result = 0;
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            for (int k = 0; k < arr.GetLength(2); k++)
+            {
+                if (arr[i, j, k] == num) result = 1;
+            }
+        }
+    }
+    return result;
+}
+
+
+
+
+
+
+// Чужое решение:
+// number = temp[i];
+//  while (temp[i] == temp[j])
+//         {
+//           temp[i] = new Random().Next(10, 100);
+//           j = 0;
+//           number = temp[i];
+//    }
 
